@@ -1,0 +1,173 @@
+{
+  "Parent": "Template_Weapon_Battleaxe",
+  "TranslationProperties": {
+    "Name": "Nature of Madness"
+  },
+  "Model": "NPC/Undead/Wraith/Models/Weapons/Battleaxe/Scythe_Void.blockymodel",
+  "Texture": "NPC/Undead/Wraith/Models/Weapons/Battleaxe/Scythe_Void_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Battleaxe_Scythe_Void.png",
+  "Quality": "Epic",
+  "ItemLevel": 50,
+  "Recipe": {
+    "TimeSeconds": 4,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Thorium",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Leather_Storm",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Rock_Gem_Emerald",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Weapon_Battleaxe_Thorium",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Battleaxe"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 3
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Swing_Down_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 69
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T2_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T2_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Poison_T1"
+        }
+      ]
+    },
+    "Swing_Down_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 30
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T2_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T2_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Down_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Right_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 39
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T2_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T2_Impact"
+          }
+        }
+      ]
+    },
+    "Downstrike_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Downstrike_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 53
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T2_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T2_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Stoneskin"
+        }
+      ]
+    },
+    "Signature_Whirlwind_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Signature_Whirlwind_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 23
+            }
+          },
+          "EntityStatsOnHit": [],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T2_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T2_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Poison_T1"
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 12.22,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 220,
+  "DurabilityLossOnHit": 0.45,
+  "Particles": [
+    {
+      "SystemId": "Effect_Poison",
+      "TargetEntityPart": "PrimaryItem",
+      "Scale": 0.5,
+      "PositionOffset": {
+        "Y": 0.8,
+        "Z": 1
+      },
+      "Color": "#106622",
+      "DetachedFromModel": false
+    }
+  ]
+}
