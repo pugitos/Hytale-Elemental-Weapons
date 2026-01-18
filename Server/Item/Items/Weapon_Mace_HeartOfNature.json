@@ -1,0 +1,231 @@
+{
+  "Parent": "Template_Weapon_Mace",
+  "TranslationProperties": {
+    "Name": "Nature Heart"
+  },
+  "Model": "NPC/Void/Spawn_Void/Models/Weapons/Longsword/Void.blockymodel",
+  "Texture": "NPC/Void/Spawn_Void/Models/Weapons/Longsword/Void_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Longsword_Void.png",
+  "Quality": "Epic",
+  "ItemLevel": 50,
+  "Recipe": {
+    "TimeSeconds": 4,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Thorium",
+        "Quantity": 20
+      },
+      {
+        "ItemId": "Ingredient_Leather_Heavy",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Rock_Gem_Emerald",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Weapon_Mace_Thorium",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Mace"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 3
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Categories": [
+          "Weapons.Mace"
+        ],
+        "Id": "Armory"
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Swing_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 53
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Poison_T1"
+        }
+      ]
+    },
+    "Swing_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Right_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 53
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Poison_T1"
+        }
+      ]
+    },
+    "Swing_Up_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Up_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 53
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Poison_T1"
+        }
+      ]
+    },
+    "Swing_Left_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Left_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 80
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Right_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Right_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 80
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Up_Left_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Up_Left_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 80
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        }
+      ]
+    },
+    "Groundslam_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Signature_Groundslam_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 179
+            }
+          },
+          "EntityStatsOnHit": [],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T2_Impact",
+            "LocalSoundEventId": "SFX_Mace_T2_Impact"
+          }
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 12.22,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 220,
+  "DurabilityLossOnHit": 0.5,
+  "Trails": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "TrailId": "Acid",
+      "PositionOffset": {
+        "Y": 1
+      }
+    }
+  ],
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Aura_Heal",
+      "Scale": 0.5,
+      "Color": "#295531",
+      "PositionOffset": {
+        "Y": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "Parent": "Template_Weapon_Mace",
+  "TranslationProperties": {
+    "Name": "Hell Fire Mace"
+  },
+  "Model": "Items/Weapons/Mace/Prisma.blockymodel",
+  "Texture": "Items/Weapons/Mace/Copper_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Mace_Copper.png",
+  "Quality": "Rare",
+  "ItemLevel": 30,
+  "Recipe": {
+    "TimeSeconds": 3,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Weapon_Mace_Copper_Fire",
+        "Quantity": 1
+      },
+      {
+        "Quantity": 4,
+        "ItemId": "Ingredient_Leather_Medium"
+      },
+      {
+        "ItemId": "Ingredient_Bar_Thorium",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 25
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Mace"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 2
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Categories": [
+          "Weapons.Mace"
+        ],
+        "Id": "Armory"
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Swing_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 30
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Right_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 30
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Up_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Up_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 30
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Left_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Left_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 46
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Immunity_Environmental"
+        },
+        "Explode_Generic_Entities",
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Burn",
+          "Entity": "Target",
+          "RunTime": 0
+        }
+      ]
+    },
+    "Swing_Right_Charged_Damage": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Immunity_Environmental"
+        },
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Right_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 46
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        "Explode_Generic_Entities",
+        {
+          "Type": "ApplyEffect",
+          "RunTime": 0,
+          "Entity": "Target",
+          "EffectId": "Burn"
+        }
+      ]
+    },
+    "Swing_Up_Left_Charged_Damage": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Immunity_Environmental"
+        },
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Up_Left_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 46
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        "Explode_Generic_Entities",
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Burn"
+        }
+      ]
+    },
+    "Groundslam_Damage": {
+      "Interactions": [
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Immunity_Environmental"
+        },
+        {
+          "Parent": "Weapon_Mace_Signature_Groundslam_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 100
+            }
+          },
+          "EntityStatsOnHit": [],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        "Bomb_Explode_Stun",
+        {
+          "Type": "ApplyEffect",
+          "RunTime": 0,
+          "Entity": "Target",
+          "EffectId": "Burn"
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 8.89,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 150,
+  "DurabilityLossOnHit": 0.5,
+  "SoundEventId": "SFX_Torch_On_Loop",
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "Color": "#c5ad5f",
+      "SystemId": "Projectile_Fire_Static",
+      "PositionOffset": {
+        "Y": 1.1
+      }
+    }
+  ],
+  "FirstPersonParticles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "SystemId": "Projectile_Fire_Static",
+      "Color": "#c5ad5f",
+      "PositionOffset": {
+        "Y": 1.1
+      }
+    }
+  ],
+  "Trails": [
+    {
+      "TrailId": "Fire_Trap_Fire",
+      "PositionOffset": {
+        "Y": 0.8
+      },
+      "TargetEntityPart": "PrimaryItem"
+    }
+  ],
+  "Light": {
+    "Radius": 1,
+    "Color": "#cb5"
+  }
+}
