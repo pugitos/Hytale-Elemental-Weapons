@@ -1,0 +1,20 @@
+{
+  "Group": "Pugitos",
+  "Name": "Elemental Weapons",
+  "Version": "1.0.0",
+  "Description": "Adds new elemental weapons to the game",
+  "Authors": [
+    {
+      "Name": "Pugitos",
+      "Email": "",
+      "Url": ""
+    }
+  ],
+  "Website": "https://github.com/pugitos/Hytale-Elemental-Weapons.git",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "SubPlugins": []
+}
