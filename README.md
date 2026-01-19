@@ -1,5 +1,5 @@
 # Hytale Elemental Weapons
-This is a mod that adds elemental weapon with status effects into the game. There elemental weapon for each part of progression of the game 
+This is a mod that adds elemental weapon (Fire/Ice/Poison) with status effects into the game. There elemental weapon for each part of progression of the game 
 
 Note: There is currently no models for the weapons. So they use the ingames given models 
 
