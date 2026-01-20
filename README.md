@@ -9,9 +9,12 @@ Note: There is currently no models for the weapons. So they use the ingames give
 ![ezgif com-video-to-gif-converter(1)](https://github.com/user-attachments/assets/4c7cedcc-a427-4266-8672-2dff52fa6b14)
 # All Current Weapons
 <img width="689" height="244" alt="Screenshot 2026-01-19 152528" src="https://github.com/user-attachments/assets/8a957569-f49e-4c2b-8cdc-77d412288e7d" />
-<img width="228" height="235" alt="Screenshot 2026-01-19 152536" src="https://github.com/user-attachments/assets/3a7d92bc-ab72-435b-8893-9a3514289e7c" />
 
-# How to set up 
+<img width="382" height="308" alt="Screenshot 2026-01-19 232316" src="https://github.com/user-attachments/assets/f85ea78c-f69c-4081-af8c-9c22f572185e" />
+
+# How to set up
+
+
 
 1. Download The zipfile
 2. Extract the zipfile
