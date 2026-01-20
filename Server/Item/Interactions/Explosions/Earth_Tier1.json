@@ -1,0 +1,10 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": false,
+    "BlockDamageRadius": 3,
+    "DamageBlocks": true,
+    "BlockDamageFalloff": 0.5,
+    "EntityDamage": 5
+  }
+}

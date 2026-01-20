@@ -1,0 +1,187 @@
+{
+  "Parent": "Template_Weapon_Battleaxe",
+  "TranslationProperties": {
+    "Name": "IceSteel Avalanche  Battleaxe"
+  },
+  "Model": "NPC/Intelligent/Outlander_Brute/Models/Weapons/Battleaxe/Doomed.blockymodel",
+  "Texture": "NPC/Intelligent/Outlander_Brute/Models/Weapons/Battleaxe/Doomed_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Battleaxe_Doomed.png",
+  "Quality": "Epic",
+  "ItemLevel": 50,
+  "Recipe": {
+    "TimeSeconds": 3,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Adamantite",
+        "Quantity": 5
+      },
+      {
+        "Quantity": 5,
+        "ItemId": "Ingredient_Voidheart"
+      },
+      {
+        "ItemId": "Ingredient_Leather_Heavy",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Weapon_Battleaxe_IceSteel"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Battleaxe"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 3
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Swing_Down_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 64
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Slow"
+        }
+      ]
+    },
+    "Swing_Down_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 30
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
+          }
+        }
+      ]
+    },
+    "Swing_Down_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Swing_Down_Right_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 40
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
+          }
+        }
+      ]
+    },
+    "Downstrike_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Primary_Downstrike_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 50
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Stoneskin"
+        },
+        "Ice_Ball_Damage"
+      ]
+    },
+    "Signature_Whirlwind_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Signature_Whirlwind_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 20
+            }
+          },
+          "EntityStatsOnHit": [],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Battleaxe_T1_Impact",
+            "LocalSoundEventId": "SFX_Battleaxe_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Stoneskin"
+        },
+        "Ice_Ball_Damage"
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Battleaxe_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 8.89,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 220,
+  "DurabilityLossOnHit": 0.45,
+  "Particles": [
+    {
+      "SystemId": "Ice_Staff",
+      "PositionOffset": {
+        "Y": 1.1,
+        "X": 0
+      },
+      "Scale": 2,
+      "RotationOffset": {
+        "Yaw": 0
+      }
+    }
+  ],
+  "Light": {
+    "Color": "#23c"
+  },
+  "Trails": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "TrailId": "Orb_Trail_White",
+      "PositionOffset": {
+        "Y": 1.2
+      }
+    }
+  ],
+  "SoundEventId": "SFX_Staff_Ice_Shoot"
+}

@@ -1,0 +1,192 @@
+{
+  "TranslationProperties": {
+    "Name": "Flame Bow"
+  },
+  "Parent": "Template_Weapon_Shortbow",
+  "Quality": "Uncommon",
+  "Model": "Items/Weapons/Bow/Bronze.blockymodel",
+  "Texture": "Items/Weapons/Bow/Copper_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Bow_Copper.png",
+  "ItemLevel": 20,
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Ingredient_Tree_Sap",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Furniture_Crude_Torch",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Weapon_Shortbow_Copper"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "Id": "Weapon_Bench"
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Categories": [
+          "Weapons.Bow"
+        ],
+        "Id": "Armory"
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Primary_Shoot_Damage_Strength_0": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_0",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 6
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_1": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_1",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 10
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_2": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_2",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 13
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_3": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_3",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 16
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_4": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_4",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 19
+            }
+          },
+          "TargetedDamage": {
+            "Head": {
+              "DamageCalculator": {
+                "BaseDamage": {
+                  "Projectile": 25
+                }
+              },
+              "DamageEffects": {
+                "Knockback": {
+                  "Type": "Force",
+                  "VelocityConfig": {
+                    "AirResistance": 0.99,
+                    "AirResistanceMax": 0.98,
+                    "GroundResistance": 0.94,
+                    "GroundResistanceMax": 0.3,
+                    "Threshold": 3.0,
+                    "Style": "Linear"
+                  },
+                  "Direction": {
+                    "X": 0.0,
+                    "Y": 0.5,
+                    "Z": -1
+                  },
+                  "Force": 8,
+                  "VelocityType": "Add"
+                },
+                "WorldParticles": [
+                  {
+                    "SystemId": "Impact_Critical",
+                    "Scale": 1,
+                    "RotationOffset": {
+                      "Yaw": 180,
+                      "Pitch": 0,
+                      "Roll": 0
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Burn"
+        }
+      ]
+    },
+    "Signature_Volley_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Signature_Volley_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 14
+            }
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Burn"
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 10,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 120,
+  "DurabilityLossOnHit": 0.58,
+  "Particles": [
+    {
+      "SystemId": "Fire_Charge_Charging_Constant",
+      "PositionOffset": {
+        "Z": 0.2
+      }
+    }
+  ]
+}

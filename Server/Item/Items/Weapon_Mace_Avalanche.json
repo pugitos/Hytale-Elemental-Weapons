@@ -1,0 +1,261 @@
+{
+  "Parent": "Template_Weapon_Mace",
+  "TranslationProperties": {
+    "Name": "IceSteel Avalanche Mace"
+  },
+  "Model": "Items/Weapons/Staff/Frost.blockymodel",
+  "Texture": "Items/Weapons/Staff/Frost_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Staff_Frost.png",
+  "Quality": "Epic",
+  "ItemLevel": 50,
+  "Recipe": {
+    "TimeSeconds": 3,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Weapon_Mace_IceSteel",
+        "Quantity": 1
+      },
+      {
+        "Quantity": 4,
+        "ItemId": "Ingredient_Leather_Heavy"
+      },
+      {
+        "ItemId": "Ingredient_Bar_Adamantite",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Voidheart",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Mace"
+        ],
+        "Id": "Weapon_Bench",
+        "RequiredTierLevel": 2
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Categories": [
+          "Weapons.Mace"
+        ],
+        "Id": "Armory"
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Swing_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 50
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Slow"
+        }
+      ]
+    },
+    "Swing_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Right_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 50
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Slow"
+        }
+      ]
+    },
+    "Swing_Up_Left_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Up_Left_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 50
+            }
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "Slow"
+        }
+      ]
+    },
+    "Swing_Left_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Left_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 79
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Stoneskin",
+          "Entity": "Target",
+          "RunTime": 0
+        }
+      ]
+    },
+    "Swing_Right_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Right_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 79
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Stoneskin",
+          "Entity": "Target",
+          "RunTime": 0
+        }
+      ]
+    },
+    "Swing_Up_Left_Charged_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Primary_Swing_Up_Left_Charged_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 79
+            }
+          },
+          "EntityStatsOnHit": [
+            {
+              "EntityStatId": "SignatureEnergy",
+              "Amount": 2
+            }
+          ],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Stoneskin",
+          "Entity": "Target",
+          "RunTime": 0
+        }
+      ]
+    },
+    "Groundslam_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Signature_Groundslam_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Physical": 163
+            }
+          },
+          "EntityStatsOnHit": [],
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Mace_T1_Impact",
+            "LocalSoundEventId": "SFX_Mace_T1_Impact"
+          }
+        },
+        "Ice_Ball_Damage",
+        {
+          "Type": "ApplyEffect",
+          "EffectId": "Stoneskin",
+          "Entity": "Target",
+          "RunTime": 0
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Mace_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 8.89,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 250,
+  "DurabilityLossOnHit": 0.5,
+  "SoundEventId": "SFX_Staff_Ice_Shoot",
+  "Particles": [
+    {
+      "TargetEntityPart": "PrimaryItem",
+      "Color": "#5fb5c5",
+      "SystemId": "Ice_Staff",
+      "PositionOffset": {
+        "Y": 1.1
+      },
+      "Scale": 2
+    }
+  ],
+  "Trails": [
+    {
+      "TrailId": "Sword_Distortion",
+      "PositionOffset": {
+        "Y": 0.8
+      },
+      "TargetEntityPart": "PrimaryItem"
+    }
+  ],
+  "Light": {
+    "Radius": 1,
+    "Color": "#57c"
+  }
+}

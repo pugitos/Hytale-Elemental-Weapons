@@ -1,0 +1,15 @@
+{
+  "Type": "Explode",
+  "Config": {
+    "DamageEntities": true,
+    "BlockDamageRadius": 10,
+    "DamageBlocks": true,
+    "Knockback": {
+      "Type": "Directional",
+      "VelocityY": 10
+    },
+    "EntityDamageRadius": 10,
+    "BlockDamageFalloff": 0.5,
+    "EntityDamage": 0
+  }
+}
