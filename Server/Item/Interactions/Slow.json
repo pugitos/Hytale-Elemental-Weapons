@@ -1,0 +1,8 @@
+{
+  "Type": "StatsCondition",
+  "Costs": {
+    "Stamina": 2.01
+  },
+  "HorizontalSpeedMultiplier": 0.8,
+  "RunTime": 1
+}

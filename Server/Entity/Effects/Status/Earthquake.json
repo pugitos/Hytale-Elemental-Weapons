@@ -1,0 +1,32 @@
+{
+  "ApplicationEffects": {
+    "Particles": [
+      {
+        "SystemId": "Block_Break_Dirt",
+        "TargetEntityPart": "Entity",
+        "Color": "#78543a",
+        "Scale": 3
+      }
+    ],
+    "EntityBottomTint": "#775a33"
+  },
+  "DamageCalculatorCooldown": 1,
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Fire": 5
+    }
+  },
+  "DamageEffects": {
+    "WorldSoundEventId": "SFX_Dirt_Hit",
+    "PlayerSoundEventId": "SFX_Dirt_Break",
+    "Knockback": {
+      "RelativeX": 20,
+      "VelocityY": 10
+    },
+    "CameraEffect": "Impact_Strong"
+  },
+  "OverlapBehavior": "Overwrite",
+  "Infinite": false,
+  "Debuff": true,
+  "Duration": 0
+}

@@ -1,0 +1,108 @@
+{
+  "TranslationProperties": {
+    "Name": "Stone Head"
+  },
+  "Parent": "Armor_Iron_Head",
+  "Quality": "Epic",
+  "ItemLevel": 35,
+  "Icon": "Icons/ItemsGenerated/Armor_Cobalt_Head.png",
+  "IconProperties": {
+    "Rotation": [
+      23.06,
+      43.315,
+      23.06
+    ],
+    "Scale": 0.45,
+    "Translation": [
+      0,
+      -8.1
+    ]
+  },
+  "Model": "Items/Armors/Cobalt/Head.blockymodel",
+  "Texture": "Items/Armors/Cobalt/Head_Texture.png",
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 40,
+        "ResourceTypeId": "Rock_Stone"
+      },
+      {
+        "Quantity": 10,
+        "ItemId": "Ingredient_Leather_Heavy"
+      },
+      {
+        "ItemId": "Ingredient_Bar_Adamantite",
+        "Quantity": 15
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Armor_Bench",
+        "Type": "Crafting",
+        "Categories": [
+          "Armor_Head"
+        ],
+        "RequiredTierLevel": 3
+      }
+    ],
+    "KnowledgeRequired": false,
+    "TimeSeconds": 3
+  },
+  "Armor": {
+    "ArmorSlot": "Head",
+    "BaseDamageResistance": 0,
+    "CosmeticsToHide": [
+      "EarAccessory",
+      "Ear",
+      "Haircut",
+      "HeadAccessory"
+    ],
+    "DamageResistance": {
+      "Physical": [
+        {
+          "Amount": 0.08,
+          "CalculationType": "Multiplicative"
+        }
+      ],
+      "Projectile": [
+        {
+          "Amount": 0.08,
+          "CalculationType": "Multiplicative"
+        }
+      ]
+    },
+    "StatModifiers": {
+      "Health": [
+        {
+          "Amount": 12,
+          "CalculationType": "Additive"
+        }
+      ]
+    },
+    "DamageClassEnhancement": {
+      "Signature": [
+        {
+          "Amount": 0.03,
+          "CalculationType": "Multiplicative"
+        }
+      ]
+    },
+    "KnockbackResistances": {
+      "Physical": 0.25
+    }
+  },
+  "MaxDurability": 120,
+  "Tags": {
+    "Type": [
+      "Armor"
+    ],
+    "Family": [
+      "Cobalt"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Armor_Heavy",
+  "DurabilityLossOnHit": 0.5,
+  "Interactions": {
+    "Equipped": "Slow"
+  }
+}
